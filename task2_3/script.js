@@ -28,18 +28,15 @@ function check() {
   }
 }
 
-function changeMe() {
-  let mainTheme = document.getElementById("containerMain");
+let page = document.querySelector("#containerMain");
 
-  switch (opt) {
-    case "white":
-      mainTheme.style.backgroundColor = "#fff";
-      break;
-    case "black":
-      mainTheme.style.backgroundColor = "#414f5a";
-      break;
-    case "yellow":
-      mainTheme.style.backgroundColor = "gold";
-      break;
-  }
+function changeTheme(theme) {
+  page.classList.remove("white", "black", "yellow");
+  page.classList.add(`${theme}`);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#theme").addEventListener("change", function () {
+    changeTheme(this.value);
+  });
+});

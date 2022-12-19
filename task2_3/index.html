@@ -10,14 +10,11 @@
   </head>
   <body>
     <div class="container-wrapper">
-      <div class="theme__color">
-        <div id="default" class="white color" onclick="opt='white'">White</div>
-        <div id="black" class="black color" onclick="opt='black'">Black</div>
-        <div id="yellow" class="yellow color" onclick="opt='yellow'">
-          Yellow
-        </div>
-        <button id="changeColor" onclick="changeMe()">Change</button>
-      </div>
+      <select name="theme__color" id="theme">
+        <option value="default" class="white">default</option>
+        <option value="black" class="black">black</option>
+        <option value="yellow" class="yellow">yellow</option>
+      </select>
       <div class="container" id="containerMain">
         <div class="container-logo">
           <div class="logo-img">
